@@ -1,0 +1,37 @@
+// Problem 2
+// Adriel Brian L. Reyes
+// 1 - 12
+
+#include<iostream>
+ 
+using namespace std;
+ 
+int main()
+{
+	int a[100],n,i,j,temp;
+	cout<<"Please enter the size of the array:\n ";
+	cin>>n;
+	cout<<"\nPlease enter the array elements: "; 
+	
+	for(i=0;i<n;++i)
+		cin>>a[i];
+		
+	for(i=1;i<n;++i)
+	{
+		for(j=0;j<(n-i);++j)
+			if(a[j]>a[j+1])
+			{
+				temp=a[j];
+				a[j]=a[j+1];
+				a[j+1]=temp;
+			}
+	}
+	
+	cout<<"This is the array after bubble sort:";
+	for(i=0;i<n;++i)
+		cout<<" "<<a[i];
+		
+	return 0;
+}
+
+
